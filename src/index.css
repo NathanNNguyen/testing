@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+  .container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .text {
+    line-height: 0.1;
+  }
+  
+  .attributes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.3rem;
+  }
+  
+  .checked {
+    color: #CAE00D;
+  }
+  
+  .rent-price {
+    width: 30%;
+    text-align: left;
+  }
+  #login {
+    background-color: rgba(112, 199, 131, 0.8);
+    padding: 0 0.8rem;
+    margin: 0 0 0 0.4rem;
+    border-radius: 5px;
+    font-weight: 900;
+    color: #ffffff;
+  }
+  .header-link {
+    color: #A6ACA8;
+    padding: 0 1.2rem;
+  }
+  .header-link:hover {
+    text-decoration: none;
+    color: #A6ACA8;
+    opacity: 0.75;
+  }
+  .hero {
+    margin: 0 auto;
+    padding: 1rem;
+    position: relative;
+  }
+  .mail {
+    position: absolute;
+    top: 0;
+    margin-left: 1.5rem;
+  }
+  .tagline {
+    margin: 0 auto;
+  }
+  .arrow {
+    height: 100%;
+  }
+  
+  .top-left {
+    top: -70px;
+    left: 0;
+    text-align: left;
+    border-bottom: 2px solid whitesmoke;
+  }
+  
+  .bottom-left {
+    text-align: left;
+  }
+  
+  .bottom-right {
+    text-align: right;
+  }
