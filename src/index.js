@@ -56,8 +56,8 @@ function App() {
   return (
     // <Security {...config} onAuthRequired={authHandler}>
     <Switch>
-      <Security issuer='https://auth.lambdalabs.dev/oauth2/default'
-        clientId='0oavso7p45Q1PRKSk4x6'
+      <Security issuer='https://dev-783756.okta.com/oauth2/default'
+        clientId='0oazj0xl0ZxIKVnSR4x6'
         redirectUri={window.location.origin + '/implicit/callback'}
         onAuthRequired={onAuthRequired} >
 
@@ -71,7 +71,7 @@ function App() {
           component={() => <HomePage LoadingComponent={LoadingComponent} />}
         />
         <SecureRoute path='/staff' exact={true} component={Staff} />
-        <Route path='/login' render={() => <Login baseUrl='https://auth.lambdalabs.dev' />} />
+        <Route path='/login' render={() => <Login baseUrl='https://dev-783756.okta.com' />} />
         <Route path='/implicit/callback' component={LoginCallback} />
 
         <Route path="/example-list" component={ExampleListPage} />
