@@ -1,68 +1,91 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-import { Link } from "react-router-dom";
-import { Button } from "antd";
+import React, { useState, useContext } from "react";
+import { useHistory } from "react-router-dom";
+import { CityContext } from "../../../contexts/CityContext";
 import CityCard from "../../common/CityCard.js";
+import CardComparison from "../../common/CardComparison.js";
 import Header from "../../common/Header.js";
 import Hero from "../../common/Hero.js";
+import { AutoComplete } from "../../common/AutoComplete.js";
 
-function RenderHomePage(props) {
-  // const { userInfo, authService } = props;
-  const { userInfo } = props;
-  const [cities, setCities] = useState([]);
+//import CityCardModal from "../../common/CityCardModal.js";
 
-  useEffect(() => {
-    getCityData();
-  }, []);
+function RenderHomePage() {
+  const {
+    cities,
+    comparisonList,
+    setComparisonList,
+    addCity,
+    removeCity,
+    isComparing,
+    setIsComparing,
+    getData
+  } = useContext(CityContext);
 
-  const getCityData = () => {
-    axios
-      .get("https://citrics-c-api.herokuapp.com/cities")
-      .then(res => {
-        console.log(res.data);
-        setCities(res.data);
-      })
-      .catch(err => console.log(err));
-  };
+  const [showStats, setShowStats] = useState(false);
 
-  return (
-    <div>
-      <Header />
-      <Hero />
-      {/* <h1>Hi {userInfo.name} Welcome to Labs Basic SPA</h1>
+  let history = useHistory();
+
+  if (comparisonList.length <= 3) {
+    return (
       <div>
-        <p>
-          This is an example of a common example of how we'd like for you to
-          approach components.
-        </p>
-        <p>
-          <Link to="/profile-list">Profiles Example</Link>
-        </p>
-        <p>
-          <Link to="/example-list">Example List of Items</Link>
-        </p>
-        <p>
-          <Link to="/datavis">Data Visualizations Example</Link>
-        </p>
-        <p>
-          <Button type="primary" onClick={() => authService.logout()}>
-            Logout
-          </Button>
-        </p> */}
-      <div className="container">
-        {cities.map((city, index) => (
-          <CityCard
-            key={index}
-            city={city.location}
-            image={city.image}
-            state={city[1]}
-            // image={city[2]}
-            index={index}
-          />
-        ))}
+        <Header />
+        <Hero />
+        <AutoComplete
+          addCity={addCity}
+          cities={cities}
+          setComparisonList={setComparisonList}
+          getData={getData}
+        />
+
+        {isComparing && (
+          <div className="comparison-container">
+            <div className="comparison">
+              {comparisonList.map((data, index) => (
+                <CardComparison
+                  key={index}
+                  removeCity={() => removeCity(index)}
+                  showStats={showStats}
+                  data={data}
+                />
+              ))}
+            </div>
+            <button
+              className="compareButton"
+              onClick={() => {
+                setShowStats(true);
+              }}
+            >
+              Compare Cities
+            </button>
+            <button
+              className="moreInfoButton"
+              onClick={() => {
+                history.push("/dataviz");
+              }}
+            >
+              More Info
+            </button>
+          </div>
+        )}
+
+        <div className="container">
+          {cities.map((city, index) => (
+            <CityCard
+              key={index}
+              city={city.location}
+              image={city.image}
+              index={index}
+              setIsComparing={setIsComparing}
+              addCity={addCity}
+              getData={getData}
+              cities={cities}
+            />
+          ))}
+        </div>
       </div>
-      {/* </div> */}
-    </div>
-  );
+    );
+  } else if (comparisonList.length > 3) {
+    alert("Can only compare at most 3 cities!");
+  }
 }
 export default RenderHomePage;
