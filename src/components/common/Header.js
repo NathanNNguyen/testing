@@ -27,11 +27,13 @@ function Header(props) {
   return (
     <Wrapper>
       <Navigation>
-        <Link className="header-link" to="/">
+        <Link className="header-link" to="/home">
           Home
         </Link>
-        <Link className="header-link">About</Link>
-        <Link id="login" className="header-link">
+        <Link className="header-link" to="/about">
+          About
+        </Link>
+        <Link id="login" className="header-link" to="/login">
           Login
         </Link>
       </Navigation>

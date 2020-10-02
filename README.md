@@ -1,33 +1,26 @@
-# Basic SPA
+# Driftly - let's find your next home!
+
+[Driftly](https://c.citrics.dev/)
+
+## Basic SPA
 
 For steps on how to work with this repository [please see here](https://docs.labs.lambdaschool.com/labs-spa-starter/)
 
-🚫 Note: All lines that start with 🚫 are instructions and should be deleted before this is posted to your first Pull-Request is merged. This is intended to be a guideline. Feel free to add your own flare to it.
-
-# Title of project goes here
-
-You can find the deployed project at [🚫URL NAME GOES HERE](🚫copy and paste URL here).
-
 ## Contributors
 
-🚫Add contributor info below, make sure add images and edit the social links for each member. Add to or delete these place-holders as needed
-
-|                                                      [William Wilson](https://github.com/AgentBillster)                                                       |                                                       [Student 2](https://github.com/)                                                        |                                                      [Student 3](https://github.com/)                                                       |                                                       [Student 4](https://github.com/)                                                        |                                                      [Student 5](https://github.com/)                                                       |
-| :-----------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------: | 
-| [<img src="https://i.ibb.co/1srz7JF/DSC0007.jpg" width = "200"  />](https://github.com/) | [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-female.png" width = "200" />](https://github.com/) | [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-male.png" width = "200" />](https://github.com/) | [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-female.png" width = "200" />](https://github.com/) | [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-male.png" width = "200" />](https://github.com/) |
-|                                [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/)                                |                            [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/honda0306)                             |                          [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/Mister-Corn)                           |                          [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/NandoTheessen)                           |                           [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/wvandolah)                            |
-|[ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/)                |                 [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/)                 |                [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/)                |                 [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/)                 |                [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/)                |
+|                                                       [Shayne Smith](https://github.com/shayne-smith)                                                        |                                                      [Guillermo Alfaro](https://github.com/galfarotolon)                                                       |                                                       [Nathan Nguyen](https://github.com/NathanNNguyen)                                                        |
+| :-------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------: |
+| [<img src="https://ca.slack-edge.com/ESZCHB482-W0123RTM51V-bf749dc3288f-512" width = "200" />](https://github.com/) | [<img src="https://ca.slack-edge.com/ESZCHB482-W0123RTV5QX-3ba8de22b37c-512" width = "200" />](https://github.com/) | [<img src="https://ca.slack-edge.com/ESZCHB482-W012QNUUE6Q-79b5f4d3d5d8-512" width = "200" />](https://github.com/) |
+|                                [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/shayne-smith)                                |                            [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/galfarotolon)                             |                          [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/NathanNNguyen)                           |
+|                 [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/)                 |                [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/)                |                 [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/nathannnguyen)                 |
 
 <br>
 <br>
-
-🚫 Optional examples of using images with links for your tech stack, make sure to change these to fit your project
 
 ![MIT](https://img.shields.io/packagist/l/doctrine/orm.svg)
 ![React](https://img.shields.io/badge/react-v16.7.0--alpha.2-blue.svg)
 ![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)
 
-🚫 more info on using badges [here](https://github.com/badges/shields)
 
 - Fork and clone the repo to install it as your own remote.
   - **note** please [be sure to set your remote](https://help.github.jp/enterprise/2.11/user/articles/changing-a-remote-s-url/) for this repo to point to your Labs Team Front End Repository.
@@ -38,55 +31,24 @@ You can find the deployed project at [🚫URL NAME GOES HERE](🚫copy and paste
 
 ### Key Features
 
-- feature one
-- feature two
-- feature three
-- feature four
-- feature five
+- See a list of approximately 700 cities' statistics about weather, job market, housing, covid cases and more
+- Allow to choose any three cities to compare data
+- Providing data visualization such as graphs or bars for better user's experience
+- Search for city by name
+- Search based on user's reference (incoming)
 
-#### Front end deployed to `🚫insert service here`
+#### Front end deployed to ` https://c.citrics.dev`
 
-#### [Back end](🚫link to back end repo here) built using:
+#### [Back end](http://driftly-ds-api.eba-pqp2r6up.us-east-2.elasticbeanstalk.com/#/default) built using FastAPI
 
-#### 🚫 back end framework goes here
-
-- point one
-- point two
-- point three
-
-🚫 List the rest of the back end end features and libraries in the same format as the framework above
-
-# APIs
-
-## Authentication API here
-
-🚫Replace text below with a description of the API
-
-Water's like me. It's laaazy ... Boy, it always looks for the easiest way to do things A little happy sunlight shining through there. Let all these little things happen. Don't fight them. Learn to use them. Even the worst thing we can do here is good.
-
-## Payment API here
-
-🚫Replace text below with a description of the API
-
-This is the way you take out your flustrations. Get away from those little Christmas tree things we used to make in school. Isn't it fantastic that you can change your mind and create all these happy things? Everything's not great in life, but we can still find beauty in it.
-
-## Misc API here
-
-🚫Replace text below with a description of the API
-
-You can do anything your heart can imagine. In life you need colors. This is where you take out all your hostilities and frustrations. It's better than kicking the puppy dog around and all that so. I'm sort of a softy, I couldn't shoot Bambi except with a camera. Trees get lonely too, so we'll give him a little friend. We'll lay all these little funky little things in there.
+Please go through this [Docs](https://github.com/Lambda-School-Labs/Labs26-Citrics-DS-TeamC) for more information about backend.
 
 # Installation Instructions
+- Clone this repo by `git clone https://github.com/Lambda-School-Labs/Labs26-Citrics-FE-TeamC`
 
-🚫explain how to install the required dependencies to get this project up and running with yarn and NPM
+- Installing the dependencies `npm i`
 
-## Other Scripts
-
-🚫replace these examples with your own
-
-    * build - creates a build of the application
-    * start - starts the production server after a build is created
-    * test - runs tests in **tests** directory \* eject - copy the configuration files and dependencies into the project so you have full control over them
+- Start the app `npm start`
 
 # Contributing
 
@@ -122,4 +84,4 @@ Remember that this project is licensed under the MIT license, and by submitting 
 
 ## Documentation
 
-See [Backend Documentation](🚫*link to your backend API SWAGGER DOCS here*) for details on the backend of our project.
+See [Backend Documentation](http://driftly-ds-api.eba-pqp2r6up.us-east-2.elasticbeanstalk.com/#/default) for details on the backend of our project.

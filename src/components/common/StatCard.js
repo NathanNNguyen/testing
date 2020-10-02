@@ -2,18 +2,13 @@ import React from "react";
 import styled from "styled-components";
 
 import { PlusCircleOutlined } from "@ant-design/icons";
-import CityCardModal from "./CityCardModal";
-
-import { Modal, Button } from "react-bootstrap";
-
-//cardComparison height from 150 to 250 px
 
 const CardComparison = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   color: whitesmoke;
   width: 29%;
-  height: 250px;
+  height: 150px;
   min-width: 300px;
   margin: 1rem;
   border-radius: 3px;
@@ -32,7 +27,7 @@ const CardComparison = styled.div`
 
 const CardHeader = styled.div`
   position: absolute;
-  width: 30%;
+  width: 25%;
   height: 15%;
   left: 0px;
   top: 10px;
@@ -91,47 +86,12 @@ const CardFooter = styled.div`
   font-size: 1.1rem;
 `;
 
-function CityCard(props) {
-  const { setIsComparing, getData, city, image, cities } = props;
-  const [modalShow, setModalShow] = React.useState(false);
-
+function StatCard(props) {
   return (
-    <CardComparison
-      style={{ background: `url(${image}) no-repeat center` }}
-      onClick={() => setModalShow(true)}
-    >
-      <CityCardModal
-        image={image}
-        show={modalShow}
-        onHide={() => setModalShow(false)}
-        cities={cities}
-        cityName={city}
-      />
-
-      <CardHeader>{city}</CardHeader>
-      <button
-        className="plus-button"
-        onClick={() => {
-          setIsComparing(true);
-          getData(city);
-        }}
-      >
-        <PlusCircleOutlined className="plus-sign" />
-      </button>
-      <CardFooter>
-        <div className="attributes">
-          <span className="rent-price">{"$1,379 / mo"}</span>
-          <span className="star-rating bottom-right">
-            <span className="fa fa-star checked"></span>
-            <span className="fa fa-star checked"></span>
-            <span className="fa fa-star checked"></span>
-            <span className="fa fa-star"></span>
-            <span className="fa fa-star"></span>
-          </span>
-        </div>
-      </CardFooter>
+    <CardComparison>
+      <CardHeader>{props.city}</CardHeader>
     </CardComparison>
   );
 }
 
-export default CityCard;
+export default StatCard;

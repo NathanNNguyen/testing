@@ -1,9 +1,36 @@
 import React, { useState } from "react";
-import axios from "axios";
-import { Link } from "react-router-dom";
-import { SearchOutlined } from "@ant-design/icons";
+import styled from "styled-components";
 
-export const AutoComplete = props => {
+/* SEARCH BAR STYLING */
+const SearchBox = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+`;
+const SearchInput = styled.input`
+  display: block;
+  width: 100%;
+  height: 40px;
+`;
+const Grid = styled.div`
+  width: 100%;
+`;
+const Result = styled.div`
+  width: 100%;
+  margin: 0.2rem 0;
+  padding: 0.3rem 1rem;
+  background-color: #ffffff;
+
+  border: 2px solid rgb(118, 118, 118);
+  border-radius: 6px;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #f9f8f4;
+  }
+`;
+
+export const MiniSearchBar = props => {
   const [suggestions] = useState([
     "Alpharetta, GA",
     "Atlanta, GA",
@@ -694,46 +721,43 @@ export const AutoComplete = props => {
     "Washington, DC"
   ]);
   const [result, setResult] = useState([]);
+  const [input, setInput] = useState("");
 
   const changeText = e => {
     let value = e.target.value;
+    setInput(value);
     let regex = new RegExp(`^${value}`, "i");
     let arr = [];
     if (value.length !== 0) {
       arr = suggestions.filter(v => regex.test(v));
     }
-
-    setResult(arr.slice(0, 5));
+    setResult(arr.slice(0, 4));
   };
 
   return (
-    <div className="search">
-      <div className="search-box">
-        <input
-          className="search-input"
-          onChange={changeText}
-          type="text"
-          placeholder="Type to search"
-        />
-        <Link className="search-btn" to="#">
-          <SearchOutlined />
-        </Link>
-      </div>
-      <div className="grid">
+    <SearchBox>
+      <SearchInput
+        onChange={changeText}
+        type="text"
+        placeholder="city search"
+        value={input}
+      />
+      <Grid>
         {result.map((item, index) => {
           return (
-            <div
-              className="result"
+            <Result
               key={index}
               onClick={() => {
                 props.getData(item);
+                setResult([]);
+                setInput("");
               }}
             >
               {item}
-            </div>
+            </Result>
           );
         })}
-      </div>
-    </div>
+      </Grid>
+    </SearchBox>
   );
 };
